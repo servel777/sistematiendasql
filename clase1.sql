@@ -101,3 +101,16 @@ where nombre='camiseta'
 select * from producto
 delete producto
 where nombre='pantalon'  
+
+
+--registrar un producto mochila
+insert into producto(Nombre,Precio,stock,Idcategoria) values('mochila',50.40,60,2)
+--buscar chila
+select * from producto where nombre like '%chila'
+--aumenter en cinco
+update producto
+set stock=65
+where nombre='mochila'
+--mostrar nombre categoria
+ select p.idProducto,p.nombre,c.Nombre from Producto p
+inner join Categoria c on p.Idcategoria=c.IdCategoria and p.nombre='mochila'
